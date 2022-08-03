@@ -38,7 +38,7 @@ $usuarios_autenticado=false;
         //testes de senhas e email
 
         if( $usuarios_autenticado){
-            echo 'Usuarios autenticado';
+            echo 'Usuario autenticado';
         }else{
             //echo 'Erro ao autenticar';
             //rendezirar ao usuairo
