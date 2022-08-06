@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -44,11 +45,13 @@
                   <input type="password" name="senha"
                    class="form-control" placeholder="Senha">
                 </div>
-        <? if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+        <?php if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+
         <div class="text-danger">
         Usuário ou senha inválidos(s)
         </div>
-      <? } ?>
+
+        <?php } ?>
 
                 <button 
                 class="btn btn-lg btn-info btn-block"

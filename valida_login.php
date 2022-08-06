@@ -1,4 +1,10 @@
 <?php
+//emitindo para o navegador alguma saida com sessao
+session_start();
+$_SESSION['x']='Oi, sou um valor de sessão';
+print_r($_SESSION);
+echo '<hr/>';
+
 //verificar se ouve autenticação dos usuario
 $usuarios_autenticado=false;
  //super global e incrementando o metodo post
