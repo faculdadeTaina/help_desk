@@ -1,10 +1,10 @@
 <?php
 //emitindo para o navegador alguma saida com sessao
-session_start();
+/*session_start();
 $_SESSION['x']='Oi, sou um valor de sessão';
 print_r($_SESSION);
 echo '<hr/>';
-
+*/
 //verificar se ouve autenticação dos usuario
 $usuarios_autenticado=false;
  //super global e incrementando o metodo post
@@ -45,7 +45,9 @@ $usuarios_autenticado=false;
 
         if( $usuarios_autenticado){
             echo 'Usuario autenticado';
+            $_SESSION['autenticado']='SIM';
         }else{
+            $_SESSION['autenticado']='NÂO';
             //echo 'Erro ao autenticar';
             //rendezirar ao usuairo
             header('Location: index.php?login=erro');

@@ -1,6 +1,8 @@
 <?php
 session_start();
-echo $_SESSION['x'];
+if(!isset($_SESSION['autenticado']))
+header('Location: index.php?login=erro2');
+echo $_SESSION['autenticado'];
 ?>
 
 <html>
