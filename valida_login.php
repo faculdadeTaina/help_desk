@@ -46,8 +46,10 @@ $usuarios_autenticado=false;
         if( $usuarios_autenticado){
             echo 'Usuario autenticado';
             $_SESSION['autenticado']='SIM';
+            //redicionar
+            header('Location: home.ph?p');
         }else{
-            $_SESSION['autenticado']='NÂO';
+            $_SESSION['autenticado']='NAO';
             //echo 'Erro ao autenticar';
             //rendezirar ao usuairo
             header('Location: index.php?login=erro');
