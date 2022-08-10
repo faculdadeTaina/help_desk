@@ -5,6 +5,14 @@ $_SESSION['x']='Oi, sou um valor de sessão';
 print_r($_SESSION);
 echo '<hr/>';
 */
+/*
+<?php
+session_start();
+if(!isset($_SESSION['autenticado']))
+header('Location: index.php?login=erro2');
+echo $_SESSION['autenticado'];
+?>
+*/
 //verificar se ouve autenticação dos usuario
 $usuarios_autenticado=false;
  //super global e incrementando o metodo post
@@ -47,7 +55,7 @@ $usuarios_autenticado=false;
             echo 'Usuario autenticado';
             $_SESSION['autenticado']='SIM';
             //redicionar
-            header('Location: home.ph?p');
+            header('Location: home.php');
         }else{
             $_SESSION['autenticado']='NAO';
             //echo 'Erro ao autenticar';

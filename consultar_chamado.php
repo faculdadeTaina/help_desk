@@ -21,6 +21,11 @@
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="logooff.php" class="nav-link">Sair</a>
+      </li>
+      </ul>
     </nav>
 
     <div class="container">    
@@ -54,7 +59,8 @@
 
               <div class="row mt-5">
                 <div class="col-6">
-                  <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                  <!--deixa d ser botão para-->
+                  <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</button>
                 </div>
               </div>
             </div>

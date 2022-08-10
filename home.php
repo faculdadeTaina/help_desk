@@ -1,9 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION['autenticado']))
-header('Location: index.php?login=erro2');
-echo $_SESSION['autenticado'];
-?>
+
 
 <html>
   <head>
@@ -28,6 +23,11 @@ echo $_SESSION['autenticado'];
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="logooff.php" class="nav-link">Sair</a>
+      </li>
+      </ul>
     </nav>
 
     <div class="container">    
@@ -41,7 +41,11 @@ echo $_SESSION['autenticado'];
             <div class="card-body">
               <div class="row">
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                <!--cirnado links--> 
+                <a href="abrir_chamado.php">
+                <img src="formulario_abrir_chamado.png" width="70" height="70">
+                </a>
+                
                 </div>
                 <div class="col-6 d-flex justify-content-center">
                   <img src="formulario_consultar_chamado.png" width="70" height="70">
