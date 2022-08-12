@@ -54,6 +54,8 @@ $usuarios_autenticado=false;
         if( $usuarios_autenticado){
             echo 'Usuario autenticado';
             $_SESSION['autenticado']='SIM';
+            $_SESSION['x']='um valor';
+            $_SESSION['y']='outro valor';
             //redicionar
             header('Location: home.php');
         }else{
