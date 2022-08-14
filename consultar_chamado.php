@@ -1,3 +1,23 @@
+
+<?php
+//declarar um array
+$chamados=array();
+//lendo arquvio
+$arquivo=fopen('arquivo.php', 'r');
+//enquando houver registros (linhas) a serem recuperadas
+while(!feof($arquivo)){
+//linhas
+  $registro=fgets($arquivo);
+  //echo  $registro;
+  $chamados[]=$registro;
+}
+//fechando arquivo
+fclose($arquivo);
+/*echo '<pre>';
+print_r($chamados);
+echo '</pre>';*/
+?>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -36,27 +56,30 @@
             <div class="card-header">
               Consulta de chamado
             </div>
-            
+
             <div class="card-body">
-              
+
+              <?php foreach($chamados as $chamado) { ?>
+              <?php
+                $chamado_dados = explode('#', $chamado);
+               if(count($chamado_dados) < 3){
+                continue;
+               }
+               // print_r($chamado_dados);
+             
+                ?>
+
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-
+                  <h5 class="card-title"><?=$chamado_dados[0]?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[1]?></h6>
+                  <p class="card-text"><?=$chamado_dados[2]?></p>
                 </div>
               </div>
-
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-
-                </div>
+             <?php } ?>
+            
               </div>
-
+            
               <div class="row mt-5">
                 <div class="col-6">
                   <!--deixa d ser botão para-->
