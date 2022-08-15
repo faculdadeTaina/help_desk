@@ -14,14 +14,16 @@ echo $_SESSION['autenticado'];
 ?>
 */
 //verificar se ouve autenticação dos usuario
-$usuarios_autenticado=false;
+$usuarios_autenticado=false;    
  //super global e incrementando o metodo post
  //usuarios do sistema 
  //criando autenticação
  $usuarios_app=array(
     //usuarios testes
-    array('email'=> 'adm@teste.com.br', 'senha'=> '123456'),
-    array('email'=> 'user@teste.com.br', 'senha'=> 'abcd')
+    array('id'=> 1,'email'=> 'adm@teste.com.br', 'senha'=> '123456'),
+    array('id'=> 2,'email'=> 'user@teste.com.br', 'senha'=> 'abcd'),
+    array('id'=> 3,'email'=> 'maria@teste.com.br', 'senha'=> 'abcd'),
+    array('id'=> 4,'email'=> 'jose@teste.com.br', 'senha'=> 'abcd')
 
  );
  
@@ -47,7 +49,7 @@ $usuarios_autenticado=false;
         //verificar se os dados são iguai
         if($user['email']== $_POST['email'] && $user['senha']== $_POST['senha']){
             $usuarios_autenticado=true;
-       
+            print_r($user);
         }
         //testes de senhas e email
 
