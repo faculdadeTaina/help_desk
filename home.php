@@ -1,5 +1,8 @@
-
-
+<?php "validador_login.php";
+//session_start();
+//print_r($_SESSION);
+echo "Estou aqui";
+?>
 <html>
   <head>
     <meta charset="utf-8" />
